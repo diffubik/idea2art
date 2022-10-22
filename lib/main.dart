@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:fps_widget/fps_widget.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -93,22 +94,23 @@ class GeneratePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Container(
-        padding: const EdgeInsets.fromLTRB(100, 0, 300, 0),
-        child: const GeneratePrimaryPanel(),
-      ),
-      Container(
-        width: 100,
-        alignment: Alignment.topLeft,
-        child: const GenerateMenu(),
-      ),
-      Container(
-          alignment: Alignment.topRight,
-          child: Container(
-            width: 300,
-            child: ListView(children: [const GenerateSettingsPanel()]),
-          )),
-    ]);
+    return FPSWidget(
+        child: Stack(children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(100, 0, 300, 0),
+            child: const GeneratePrimaryPanel(),
+          ),
+          Container(
+            width: 100,
+            alignment: Alignment.topLeft,
+            child: const GenerateMenu(),
+          ),
+          Container(
+              alignment: Alignment.topRight,
+              child: Container(
+                width: 300,
+                child: ListView(children: [const GenerateSettingsPanel()]),
+              )),
+    ]));
   }
 }

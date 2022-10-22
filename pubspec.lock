@@ -226,6 +226,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fps_widget:
+    dependency: "direct main"
+    description:
+      name: fps_widget
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1+2"
   freezed:
     dependency: "direct dev"
     description:
